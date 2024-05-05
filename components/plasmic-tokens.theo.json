@@ -1,0 +1,49 @@
+{
+  "props": [
+    {
+      "name": "black",
+      "type": "color",
+      "value": "#000000",
+      "category": "color",
+      "meta": {
+        "projectId": "xRAcoqoeZTpXRdngB2t4Z",
+        "id": "rszAbSCaTp5H"
+      }
+    },
+    {
+      "name": "container",
+      "type": "spacing",
+      "value": "1440px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "xRAcoqoeZTpXRdngB2t4Z",
+        "id": "meHoSaD-4i4f"
+      }
+    },
+    {
+      "name": "height",
+      "type": "spacing",
+      "value": "430px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "xRAcoqoeZTpXRdngB2t4Z",
+        "id": "k1SRBExyr_cS"
+      }
+    },
+    {
+      "name": "white",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "xRAcoqoeZTpXRdngB2t4Z",
+        "id": "y647qpXmyDDi"
+      }
+    }
+  ],
+  "global": {
+    "meta": {
+      "source": "plasmic.app"
+    }
+  }
+}
