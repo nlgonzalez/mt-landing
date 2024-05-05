@@ -215,7 +215,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               sty.link
                             )}
                             component={Link}
-                            href={"https://www.plasmic.app/"}
+                            href={"https://twitter.com/materminalshop"}
                             platform={"nextjs"}
                           >
                             {"materminalshop"}
