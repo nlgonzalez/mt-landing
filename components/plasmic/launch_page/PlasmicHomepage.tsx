@@ -78,9 +78,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   section?: Flex__<"section">;
-  columns?: Flex__<"div">;
-  column?: Flex__<"div">;
-  text?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -149,16 +147,8 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.section)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__ylyZd)}>
-              <div
-                data-plasmic-name={"columns"}
-                data-plasmic-override={overrides.columns}
-                className={classNames(projectcss.all, sty.columns)}
-              >
-                <div
-                  data-plasmic-name={"column"}
-                  data-plasmic-override={overrides.column}
-                  className={classNames(projectcss.all, sty.column)}
-                >
+              <div className={classNames(projectcss.all, sty.columns__kOyWc)}>
+                <div className={classNames(projectcss.all, sty.column___4BaQv)}>
                   <Stack__
                     as={"div"}
                     hasGap={true}
@@ -169,7 +159,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(sty.img__qWgv4)}
                       displayHeight={"auto"}
                       displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
+                      displayMaxWidth={"200px"}
                       displayMinHeight={"0"}
                       displayMinWidth={"0"}
                       displayWidth={"auto"}
@@ -188,37 +178,48 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__jqnoJ
+                          sty.columns__pJzcF
                         )}
                       >
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__pShYz)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"40px"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"auto"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/launch_page/images/image.webp",
-                            fullWidth: 256,
-                            fullHeight: 256,
-                            aspectRatio: undefined
-                          }}
-                        />
-
                         <div
-                          data-plasmic-name={"text"}
-                          data-plasmic-override={overrides.text}
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text
+                            sty.column___6FYMn
                           )}
                         >
-                          {"materminalshop"}
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__pShYz)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"40px"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"auto"}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/launch_page/images/image.webp",
+                              fullWidth: 256,
+                              fullHeight: 256,
+                              aspectRatio: undefined
+                            }}
+                          />
+
+                          <PlasmicLink__
+                            data-plasmic-name={"link"}
+                            data-plasmic-override={overrides.link}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              projectcss.__wab_text,
+                              sty.link
+                            )}
+                            component={Link}
+                            href={"https://www.plasmic.app/"}
+                            platform={"nextjs"}
+                          >
+                            {"materminalshop"}
+                          </PlasmicLink__>
                         </div>
                       </div>
                     </div>
@@ -234,11 +235,9 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "columns", "column", "text"],
-  section: ["section", "columns", "column", "text"],
-  columns: ["columns", "column", "text"],
-  column: ["column", "text"],
-  text: ["text"]
+  root: ["root", "section", "link"],
+  section: ["section", "link"],
+  link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -246,9 +245,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   section: "section";
-  columns: "div";
-  column: "div";
-  text: "div";
+  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -312,9 +309,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
-    columns: makeNodeComponent("columns"),
-    column: makeNodeComponent("column"),
-    text: makeNodeComponent("text"),
+    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
