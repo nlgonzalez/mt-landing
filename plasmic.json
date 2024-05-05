@@ -282,6 +282,11 @@
           "id": "mfTCgcxcCQ8Q",
           "name": "image",
           "filePath": "../public/plasmic/launch_page/images/image.webp"
+        },
+        {
+          "id": "3fhmf_MChE_h",
+          "name": "XBack.png",
+          "filePath": "../public/plasmic/launch_page/images/xBackpng.png"
         }
       ],
       "indirect": false,

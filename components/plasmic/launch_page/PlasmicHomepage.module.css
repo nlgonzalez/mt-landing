@@ -190,18 +190,29 @@
   min-width: 0;
   padding: 8px;
 }
+.freeBox__nygdy {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
 .img__pShYz {
   position: relative;
   object-fit: contain;
-  max-width: 40px;
   align-self: center;
+  height: 16px;
+  margin-right: 6px;
 }
 .img__pShYz > picture > img {
   object-fit: contain;
 }
 .link {
-  position: relative;
   color: var(--token-y647qpXmyDDi);
   font-family: "Sometype Mono";
-  line-height: 2.4;
+  line-height: 1.7;
 }

@@ -187,39 +187,46 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.column___6FYMn
                           )}
                         >
-                          <PlasmicImg__
-                            alt={""}
-                            className={classNames(sty.img__pShYz)}
-                            displayHeight={"auto"}
-                            displayMaxHeight={"none"}
-                            displayMaxWidth={"40px"}
-                            displayMinHeight={"0"}
-                            displayMinWidth={"0"}
-                            displayWidth={"auto"}
-                            loading={"lazy"}
-                            src={{
-                              src: "/plasmic/launch_page/images/image.webp",
-                              fullWidth: 256,
-                              fullHeight: 256,
-                              aspectRatio: undefined
-                            }}
-                          />
-
-                          <PlasmicLink__
-                            data-plasmic-name={"link"}
-                            data-plasmic-override={overrides.link}
+                          <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.a,
-                              projectcss.__wab_text,
-                              sty.link
+                              sty.freeBox__nygdy
                             )}
-                            component={Link}
-                            href={"https://twitter.com/materminalshop"}
-                            platform={"nextjs"}
                           >
-                            {"materminalshop"}
-                          </PlasmicLink__>
+                            <PlasmicImg__
+                              alt={""}
+                              className={classNames(sty.img__pShYz)}
+                              displayHeight={"16px"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"none"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              loading={"lazy"}
+                              src={{
+                                src: "/plasmic/launch_page/images/xBackpng.png",
+                                fullWidth: 90,
+                                fullHeight: 86,
+                                aspectRatio: undefined
+                              }}
+                            />
+
+                            <PlasmicLink__
+                              data-plasmic-name={"link"}
+                              data-plasmic-override={overrides.link}
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                projectcss.__wab_text,
+                                sty.link
+                              )}
+                              component={Link}
+                              href={"https://twitter.com/materminalshop"}
+                              platform={"nextjs"}
+                            >
+                              {"materminalshop"}
+                            </PlasmicLink__>
+                          </div>
                         </div>
                       </div>
                     </div>
