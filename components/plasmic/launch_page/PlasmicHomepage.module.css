@@ -46,7 +46,7 @@
   max-width: var(--token-meHoSaD-4i4f);
   min-width: 0;
   flex-shrink: 0;
-  padding: 53px 0px 79px;
+  padding: 13px 0px 79px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__ylyZd {
@@ -215,4 +215,11 @@
   color: var(--token-y647qpXmyDDi);
   font-family: "Sometype Mono";
   line-height: 1.7;
+}
+.embedHtml:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+  margin-right: 0px;
+  width: 658px;
 }

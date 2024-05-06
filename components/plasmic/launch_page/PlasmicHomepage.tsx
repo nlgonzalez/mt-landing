@@ -59,6 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: xRAcoqoeZTpXRdngB2t4Z/projectcss
@@ -79,6 +81,7 @@ export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   section?: Flex__<"section">;
   link?: Flex__<"a"> & Partial<LinkProps>;
+  embedHtml?: Flex__<typeof Embed>;
 };
 
 export interface DefaultHomepageProps {}
@@ -233,6 +236,14 @@ function PlasmicHomepage__RenderFunc(props: {
                   </Stack__>
                 </div>
               </div>
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml)}
+                code={
+                  '<div style="width:100%;height:500px;" data-fillout-id="tmH1Yf8GdFus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div><script src="https://server.fillout.com/embed/v1/"></script>'
+                }
+              />
             </div>
           </section>
         </Stack__>
@@ -242,9 +253,10 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "link"],
-  section: ["section", "link"],
-  link: ["link"]
+  root: ["root", "section", "link", "embedHtml"],
+  section: ["section", "link", "embedHtml"],
+  link: ["link"],
+  embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -253,6 +265,7 @@ type NodeDefaultElementType = {
   root: "div";
   section: "section";
   link: "a";
+  embedHtml: typeof Embed;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -317,6 +330,7 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
     link: makeNodeComponent("link"),
+    embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
