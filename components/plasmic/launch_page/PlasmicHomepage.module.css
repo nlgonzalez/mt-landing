@@ -221,5 +221,6 @@
   object-fit: cover;
   position: relative;
   margin-right: 0px;
-  width: 658px;
+  width: 100%;
+  min-width: 0;
 }
