@@ -80,7 +80,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   section?: Flex__<"section">;
-  text?: Flex__<"div">;
   link?: Flex__<"a"> & Partial<LinkProps>;
   embedHtml?: Flex__<typeof Embed>;
 };
@@ -180,17 +179,24 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.freeBox__vWa7R)}
                     >
                       <div
-                        data-plasmic-name={"text"}
-                        data-plasmic-override={overrides.text}
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text
+                          sty.text__oNc81
                         )}
                       >
                         {
-                          "Yerba mate agroecol\u00f3gica estilo sintacc de la terminal a tu casa"
+                          "Yerba mate agroecol\u00f3gica estilo sin tacc de la terminal ssh a tu casa"
                         }
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__cOqq9
+                        )}
+                      >
+                        {"ssh materminal.shop"}
                       </div>
                       <div
                         className={classNames(
@@ -267,9 +273,8 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "text", "link", "embedHtml"],
-  section: ["section", "text", "link", "embedHtml"],
-  text: ["text"],
+  root: ["root", "section", "link", "embedHtml"],
+  section: ["section", "link", "embedHtml"],
   link: ["link"],
   embedHtml: ["embedHtml"]
 } as const;
@@ -279,7 +284,6 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   section: "section";
-  text: "div";
   link: "a";
   embedHtml: typeof Embed;
 };
@@ -345,7 +349,6 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
-    text: makeNodeComponent("text"),
     link: makeNodeComponent("link"),
     embedHtml: makeNodeComponent("embedHtml"),
 
