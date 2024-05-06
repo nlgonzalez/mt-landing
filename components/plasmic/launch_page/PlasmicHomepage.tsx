@@ -189,7 +189,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "Yerba mate agroecol\u00f3gica SINTACC de la terminal a tu casa"
+                          "Yerba mate agroecol\u00f3gica estilo sintacc de la terminal a tu casa"
                         }
                       </div>
                       <div
