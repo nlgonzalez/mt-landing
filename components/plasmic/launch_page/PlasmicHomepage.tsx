@@ -80,6 +80,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   section?: Flex__<"section">;
+  text?: Flex__<"div">;
   link?: Flex__<"a"> & Partial<LinkProps>;
   embedHtml?: Flex__<typeof Embed>;
 };
@@ -179,6 +180,19 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.freeBox__vWa7R)}
                     >
                       <div
+                        data-plasmic-name={"text"}
+                        data-plasmic-override={overrides.text}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text
+                        )}
+                      >
+                        {
+                          "Yerba mate agroecologica SINTACC de tu termianl a tu casa"
+                        }
+                      </div>
+                      <div
                         className={classNames(
                           projectcss.all,
                           sty.columns__pJzcF
@@ -253,8 +267,9 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "link", "embedHtml"],
-  section: ["section", "link", "embedHtml"],
+  root: ["root", "section", "text", "link", "embedHtml"],
+  section: ["section", "text", "link", "embedHtml"],
+  text: ["text"],
   link: ["link"],
   embedHtml: ["embedHtml"]
 } as const;
@@ -264,6 +279,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   section: "section";
+  text: "div";
   link: "a";
   embedHtml: typeof Embed;
 };
@@ -329,6 +345,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
+    text: makeNodeComponent("text"),
     link: makeNodeComponent("link"),
     embedHtml: makeNodeComponent("embedHtml"),
 

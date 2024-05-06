@@ -147,6 +147,17 @@
   min-width: 0;
   padding: 0px;
 }
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-y647qpXmyDDi);
+  font-family: "Sometype Mono";
+  text-align: center;
+  font-size: 21px;
+  min-width: 0;
+}
 .columns__pJzcF {
   display: flex;
   position: relative;
