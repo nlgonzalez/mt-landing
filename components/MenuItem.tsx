@@ -9,8 +9,8 @@ interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = ({ label, isSelected }) => {
   const activeClass = isSelected ? 'menu-item-active' : '';
   return (
-    <div className={`menu-item ${activeClass}`}>
-      {label}
+    <div className={`menu-item ${activeClass}`} style={{color: "red", "fontFamily":"Sometype Mono"}}>
+      - {label}
     </div>
   );
 }
