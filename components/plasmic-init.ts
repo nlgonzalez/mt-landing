@@ -1,16 +1,17 @@
 import { registerComponent } from "@plasmicapp/react-web/lib/host";
 import Menu from "./Menu"
 
-registerComponent(Menu.MenuItem, {
+registerComponent(MenuItem, {
   name: 'MenuItem',
   displayName: 'Menu Item',
   props: {
     label: 'string',
     isSelected: 'boolean'
-  }
+  },
+  importPath: './components/MenuItem',
 });
 
-registerComponent(Menu.Menu, {
+registerComponent(Menu, {
   name: 'Menu',
   props: {
     mode: 'string',
@@ -48,6 +49,7 @@ registerComponent(Menu.Menu, {
         }
       ]
     }
-  }
+  },
+  importPath: './components/Menu',
 });
 

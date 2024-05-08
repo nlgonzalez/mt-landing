@@ -1,20 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-
-interface MenuItemProps {
-  label: string;
-  isSelected?: boolean;
-}
-
-const MenuItem: React.FC<MenuItemProps> = ({ label, isSelected }) => {
-  const activeClass = isSelected ? 'menu-item-active' : '';
-  return (
-    <div className={`menu-item ${activeClass}`}>
-      {label}
-    </div>
-  );
-}
-
+import MenuItem from './MenuItem'
 
 interface MenuProps {
   mode: 'horizontal' | 'vertical';  // Here you can add more modes as needed
@@ -62,4 +48,4 @@ const Menu: React.FC<MenuProps> = ({
     </nav>
   );
 }
-export default { Menu, MenuItem };
+export default Menu;
