@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
-import Menu from "./Menu"
-import MenuItem from "./MenuItem"
+import Menu from "../components/Menu"
+import MenuItem from "../components/MenuItem"
 
 registerComponent(MenuItem, {
   name: 'MenuItem',
@@ -10,7 +10,7 @@ registerComponent(MenuItem, {
     label: 'string',
     isSelected: 'boolean'
   },
-  importPath: './components/MenuItem',
+  importPath: '../components/MenuItem',
 });
 
 registerComponent(Menu, {
@@ -52,7 +52,7 @@ registerComponent(Menu, {
       ]
     }
   },
-  importPath: './components/Menu',
+  importPath: '../components/Menu',
 });
 
 
