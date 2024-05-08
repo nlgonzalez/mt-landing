@@ -21,8 +21,8 @@ registerComponent(Menu, {
   props: {
     mode: "string",
     theme: "string",
-    selectedKeys: "object",
-    defaultSelectedKeys: "object",
+    selectedKeys: { type: "array", defaultValue: [2] },
+    defaultSelectedKeys: { type: "array", defaultValue: [2] },
     children: {
       type: "slot",
       // Only allow MenuItem in children slot
