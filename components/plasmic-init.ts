@@ -1,5 +1,6 @@
 import { registerComponent } from "@plasmicapp/react-web/lib/host";
 import Menu from "./Menu"
+import MenuItem from "./MenuItem"
 
 registerComponent(MenuItem, {
   name: 'MenuItem',
