@@ -31,21 +31,19 @@ registerComponent(Menu, {
           type: 'component',
           name: 'MenuItem',
           props: {
-            children: {
-              type: 'text',
-              value: 'Menu Option 1'
+            label: 'Menu item 1',
+            isSelected: false
             }
-          }
         },
         {
           type: 'component',
           name: 'MenuItem',
           props: {
-            children: {
-              type: 'text',
-              value: 'Menu Option 2'
+            props: {
+              label: 'Menu item 2',
+              isSelected: true
+              }
             }
-          }
         }
       ]
     }
