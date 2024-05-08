@@ -3,14 +3,13 @@ import React, { useState, useEffect } from 'react';
 
 interface MenuItemProps {
   label: string;
-  onClick: () => void;
   isSelected?: boolean;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ label, onClick, isSelected }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ label, isSelected }) => {
   const activeClass = isSelected ? 'menu-item-active' : '';
   return (
-    <div className={`menu-item ${activeClass}`} onClick={onClick}>
+    <div className={`menu-item ${activeClass}`}>
       {label}
     </div>
   );

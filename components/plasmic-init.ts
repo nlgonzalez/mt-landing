@@ -6,6 +6,7 @@ registerComponent(Menu.MenuItem, {
   displayName: 'Menu Item',
   props: {
     label: 'string',
+    isSelected: 'boolean'
   }
 });
 
