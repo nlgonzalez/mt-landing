@@ -31,7 +31,6 @@ registerComponent(Menu, {
           type: 'component',
           name: 'MenuItem',
           props: {
-            key: 'key1',
             children: {
               type: 'text',
               value: 'Menu Option 1'
@@ -42,7 +41,6 @@ registerComponent(Menu, {
           type: 'component',
           name: 'MenuItem',
           props: {
-            key: 'key2',
             children: {
               type: 'text',
               value: 'Menu Option 2'
