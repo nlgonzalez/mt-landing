@@ -51,10 +51,7 @@ const Menu: React.FC<MenuProps> = ({
     return React.Children.map(children, child => {
       if (React.isValidElement(child)) {
         const isSelected = activeKeys.includes(child.key as string);
-        return React.cloneElement(child, {
-          onClick: () => handleItemClick(child.key as string),
-          isSelected
-        });
+        return React.cloneElement(child, {});
       }
       return child;
     });
