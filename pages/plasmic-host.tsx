@@ -1,56 +1,56 @@
-import * as React from 'react';
-import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
-import Menu from "../components/Menu"
-import MenuItem from "../components/MenuItem"
+import * as React from "react";
+import {
+  PlasmicCanvasHost,
+  registerComponent,
+} from "@plasmicapp/react-web/lib/host";
+import Menu from "../components/Menu";
+import MenuItem from "../components/MenuItem";
 
 registerComponent(MenuItem, {
-  name: 'MenuItem',
-  displayName: 'Menu Item',
+  name: "MenuItem",
+  displayName: "Menu Item",
   props: {
-    label: 'string',
-    isSelected: 'boolean'
+    label: "string",
+    isSelected: "boolean",
   },
-  importPath: '../components/MenuItem',
+  importPath: "../components/MenuItem",
 });
 
 registerComponent(Menu, {
-  name: 'Menu',
+  name: "Menu",
   props: {
-    mode: 'string',
-    theme: 'string',
-    selectedKeys: 'object',
-    defaultSelectedKeys: 'object',
+    mode: "string",
+    theme: "string",
+    selectedKeys: "object",
+    defaultSelectedKeys: "object",
     children: {
-      type: 'slot',
+      type: "slot",
       // Only allow MenuItem in children slot
-      allowedComponents: ['MenuItem'],
+      allowedComponents: ["MenuItem"],
 
       // Default slot contents: two MenuItems
       defaultValue: [
         {
-          type: 'component',
-          name: 'MenuItem',
+          type: "component",
+          name: "MenuItem",
           props: {
-            label: 'Menu item 1',
-            isSelected: false
-            }
+            label: "Menu item 1",
+            isSelected: false,
+          },
         },
         {
-          type: 'component',
-          name: 'MenuItem',
+          type: "component",
+          name: "MenuItem",
           props: {
-            props: {
-              label: 'Menu item 2',
-              isSelected: true
-              }
-            }
-        }
-      ]
-    }
+            label: "Menu item 2",
+            isSelected: true,
+          },
+        },
+      ],
+    },
   },
-  importPath: '../components/Menu',
+  importPath: "../components/Menu",
 });
-
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
