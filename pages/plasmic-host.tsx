@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
-
+import * as PlasmicInit from '../components/plasmic-init'
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
 // And configure your Plasmic project to use the host url pointing at

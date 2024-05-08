@@ -1,22 +1,12 @@
-import { registerComponent } from '@plasmicapp/react-web/lib/host';
+import { registerComponent } from "@plasmicapp/react-web/lib/host";
 
-import React from 'react';
+import React from "react";
 
-function MenuItem({ label }) {
-  return (
-    <div className="menu-item">
-      {label}
-    </div>
-  );
-}
+const MenuItem = ({ label }) => {
+  return <div className="menu-item">{label}</div>;
+};
 
-function Menu({
-  mode,
-  theme,
-  selectedKeys,
-  defaultSelectedKeys,
-  children
-}) {
+const Menu = ({ mode, theme, selectedKeys, defaultSelectedKeys, children }) => {
   const [activeKeys, setActiveKeys] = useState(defaultSelectedKeys);
 
   useEffect(() => {
@@ -26,31 +16,28 @@ function Menu({
   }, [selectedKeys]);
 
   const handleItemClick = (key) => {
-    if (!selectedKeys) { // Only update if controlled externally
+    if (!selectedKeys) {
+      // Only update if controlled externally
       setActiveKeys([key]);
     }
     console.log(`Item with key ${key} clicked`);
   };
 
   const renderMenuItems = () => {
-    return React.Children.map(children, child => {
+    return React.Children.map(children, (child) => {
       if (React.isValidElement(child)) {
         const isSelected = activeKeys.includes(child.key);
         return React.cloneElement(child, {
           onClick: () => handleItemClick(child.key),
-          isSelected
+          isSelected,
         });
       }
       return child;
     });
   };
 
-  return (
-    <nav className={`menu ${mode} ${theme}`}>
-      {renderMenuItems()}
-    </nav>
-  );
-}
+  return <nav className={`menu ${mode} ${theme}`}>{renderMenuItems()}</nav>;
+};
 
 registerComponent(MenuItem, {
   name: 'MenuItem',
@@ -100,3 +87,5 @@ registerComponent(Menu, {
     }
   }
 });
+
+export { Menu, MenuItem };
