@@ -304,6 +304,18 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        },
+        {
+          "id": "QBc4Yylk8IuR",
+          "name": "MenuItem",
+          "displayName": "MenuItem",
+          "componentImportPath": "../components/MenuItem"
+        },
+        {
+          "id": "JCMBuysi91u9",
+          "name": "Menu",
+          "displayName": "Menu",
+          "componentImportPath": "../components/Menu"
         }
       ],
       "customFunctions": []
@@ -364,8 +376,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     }
   ],
   "globalVariants": {
@@ -382,6 +393,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.329",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.329/dist/plasmic.schema.json"
+  "cliVersion": "0.1.331",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.331/dist/plasmic.schema.json"
 }

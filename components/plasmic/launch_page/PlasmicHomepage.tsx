@@ -115,8 +115,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   return (
     <React.Fragment>
       <Head></Head>
@@ -186,7 +184,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "Yerba mate agroecol\u00f3gica estilo sin tacc de la terminal ssh a tu casa"
+                          "Yerba mate agroecol\u00f3gica estilo sin tacc ni otra cosa de la terminal ssh a tu casa"
                         }
                       </div>
                       <div
